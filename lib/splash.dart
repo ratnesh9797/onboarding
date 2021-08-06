@@ -45,7 +45,7 @@ class _SplashState extends State<Splash> {
           ),
         ),
       ),
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Colors.indigo,
     );
   }
 }

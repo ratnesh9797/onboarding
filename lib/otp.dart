@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:onboarding_demo/dashboard.dart';
 
 class Otp extends StatefulWidget {
   @override
@@ -66,19 +67,31 @@ class _OtpState extends State<Otp> {
                 child: Row(
                   children: [
                     Expanded(
-                        child: Container(
-                      height: 60,
-                      decoration: BoxDecoration(
-                          color: Colors.orangeAccent,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Center(
-                          child: Text(
-                        "Verify OTP",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
+                        child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Dashboard();
+                            },
+                          ),
+                        );
+                      },
+                      child: Container(
+                        height: 60,
+                        decoration: BoxDecoration(
+                            color: Colors.orangeAccent,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Center(
+                            child: Text(
+                          "Verify OTP",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )),
+                      ),
                     ))
                   ],
                 ),
